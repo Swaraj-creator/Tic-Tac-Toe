@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="ticStyle.css">
+    <link rel="icon" href="566294.png">
+</head>
+
+<body>
+    <audio src="Powerful-Trap.mp3" type="audio/mp3" autostart="true" loop="true"></audio>
+    <!-- this is to get details of players -->
+    <div class="box1">
+        <div class="details">
+            <p class="title">Tic Tac Toe</p>
+            <p class="player1">Player O</p>
+            <p class="player2">Player X</p>
+            <input type="text" id="p1" placeholder="Name...">
+            <div class="rd1" onclick="randO()"></div>
+            <input type="text" id="p2" placeholder="Name...">
+            <div class="rd2" onclick="randX()"></div>
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <p class="avtarsTxt" id="av1">Avtars :-</p>
+            <div class="avtar" id="avPO" onclick="changeAvtarO()"></div>
+            <div class="POBOX closed">
+                <p class="o">O's Avtars</p>
+                <div class="avlistO"></div>
+            </div>
+            <div class="avtar" id="avPX" onclick="changeAvtarX()"></div>
+            <div class="PXBOX closed">
+                <p class="x">X's Avtars</p>
+                <div class="avlistX"></div>
+            </div>
+            <p class="avtarsTxt" id="av2">Avtars :-</p>
+            <button onclick="getDetails()" class="but1">Start</button>
+        </div>
+    </div>
+
+    <!-- game board -->
+    <div class="box2">
+        <div class="plinfo" id="info1">
+            <div class="choosenAvtarO"></div>
+            <p class="vspO"></p>
+            <p style="color: #ffffff; font-size: 15px; font-family: 'Josefin Sans'; position: absolute; top: calc(50% + 15px); left: 130px; user-select: none;">Player  O</p>
+        </div>
+        <div class="vsico"></div>
+        <p class="turn">Player - O's Turn !</p>
+        <div class="board">
+            
+        </div>
+        <div class="plinfo" id="info2">
+            <p class="vspX"></p>
+            <div class="choosenAvtarX"></div>
+            <p style="color: #ffffff; font-size: 15px; font-family: 'Josefin Sans'; position: absolute; top: calc(50% + 15px); right: 130px; user-select: none;">Player  X</p>
+        </div>
+    </div>
+
+    <!-- announcing winner -->
+    <div class="box3">
+        <div class="winnerBox">
+            <div class="winnerAvtar"></div>
+            <div class="king"></div>
+            <p class="winner"></p>
+            <p class="winnerIntro"></p>
+        </div>
+        <div class="drawbox">
+            <div style="width: 200px; position: absolute; height: inherit; white-space: nowrap; top: 0px; right: 0px;">
+                <div class="drwOavtar"></div>
+                <p class="drwOname"></p>
+                <p class="tagInfo">Player  O</p>
+            </div>
+            <div class="draw"></div>
+            <div style="width: 200px; position: absolute; height: inherit; white-space: nowrap; top: 0px; left: 0px;">
+                <div class="drwXavtar"></div>
+                <p class="drwXname"></p>
+                <p class="tagInfo">Player  X</p>
+            </div>
+        </div>
+        <div style="width: 100%; height: 70px; position: absolute; bottom: 30px; display: flex; justify-content: center; align-items: center;">
+            <button onclick="replay()" class="replayBtn">Replay</button>
+            <button onclick="window.close()" class="quitBtn">Quit</button>
+        </div>
+    </div>
+    <p class="copyright"> © Copyright - 2022 | Made with ❤️ By - Swaraj Kumar.</p>
+    <!-- calling javascript -->
+    <script src="game.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
